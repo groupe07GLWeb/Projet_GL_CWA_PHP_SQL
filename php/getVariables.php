@@ -24,11 +24,6 @@ if ($result = mysqli_query($connexion,$sqlAllVariables))
 	//echo "variable";
 	echo json_encode($variables);
 //echo "\n";
-
-	//echo "<br>";
-	//echo "variables";
-	echo json_encode($variables);
-	//echo "<br>";
 }else{
 	http_response_code(404);
 	echo "Error retriving data of variables" . mysqli_error($connexion);
