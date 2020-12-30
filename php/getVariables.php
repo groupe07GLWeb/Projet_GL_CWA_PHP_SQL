@@ -20,17 +20,15 @@ if ($result = mysqli_query($connexion,$sqlAllVariables))
 		$variables[$index]['insecticide'] = $row['insecticide'];
 		$index++;
 	}
-<<<<<<< HEAD
 //echo "\n";
 	//echo "variable";
 	echo json_encode($variables);
 //echo "\n";
-=======
+
 	//echo "<br>";
 	//echo "variables";
 	echo json_encode($variables);
 	//echo "<br>";
->>>>>>> 94372b3dfa20cb8579f30c3ac378e49f0cbd97e7
 }else{
 	http_response_code(404);
 	echo "Error retriving data of variables" . mysqli_error($connexion);
