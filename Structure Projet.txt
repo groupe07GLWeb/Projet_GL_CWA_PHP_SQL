@@ -1,0 +1,8 @@
+Login : localhost:4200/
+Visualiser équipement: localhost:4200/equipment
+Parcours cereales: localhost:4200/parcereale
+Silo : localhost:4200/silo
+Lorsque on lance le projet, c'est la page login qui s'affiche. 
+Vous pouvez voir les routes dans le fichier app-routing.module.ts et les changer.
+
+

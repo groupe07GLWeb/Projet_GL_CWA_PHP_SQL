@@ -1,0 +1,7 @@
+projetDB.variable.insertOne(
+   {"_id":{"$oid":"5fd38a842c491c243e428a3e"},
+   "temperature":20,
+   "humidite":3.2,
+   "poussiere":1.3,
+   "insecticide":12}
+)

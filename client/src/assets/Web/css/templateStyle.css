@@ -1,0 +1,489 @@
+/*[ GENERAL ]
+///////////////////////////////////////////////////////////
+*/
+
+
+.page-header {
+    
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #fafafa;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.container-fluid{
+    width: 88%;
+    margin-top: 60px;
+}
+                                                                                                        
+.container-fluid > header {
+    margin-bottom: 40px;
+}
+
+/* General Media Query ------------------------------------- */
+
+@media (max-width: 1200px) {
+    a.nav-link {
+      font-size: 15px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    nav.navbar .search-btn {
+        margin-left: 0;
+        padding-left: 0;
+        border-left: none;
+    }
+
+    .container-fluid {
+        width: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+    nav.navbar .container {
+        width: 100%;
+    }
+}
+
+.text-gray-400 {
+    color: #d1d3e2 !important;
+}
+
+.text-gray-600 {
+    color: #858796 !important;
+}
+
+.text-gray-800 {
+    color: #5a5c69 !important;
+}
+
+.dropdown.no-arrow .dropdown-toggle::after {
+    display: none;
+}
+
+/*[ BUTTONS ]
+///////////////////////////////////////////////////////////
+*/
+.btn {
+    font-weight: normal;
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    border-radius: 10px;
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+}
+
+.btn-primary {
+    color: white;
+    background-color: green;
+}
+
+.btn-primary:hover {
+    color: #111;
+    background-color: #868686;
+    border-color: gray;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+}
+
+/*[ NAVBAR ]
+///////////////////////////////////////////////////////////
+*/
+
+.topbar {
+    height: 4.375rem;
+}
+
+li.nav-item.modif {
+    background-color: white !important;
+    background-color: rgba(255, 255, 255, 0.6) !important;
+    border-radius: 10px;
+    transition-duration: 1s;
+}
+
+li.nav-item.modif:hover {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.topbar .nav-item .nav-link {
+    height: 2.3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    padding: 0 0.75rem;
+    transition-duration: 1s;
+}
+
+.topbar .nav-item .nav-link:hover {
+    color: #009633;
+  font-weight: bold;
+}
+
+.topbar .nav-item .nav-link:focus {
+    outline: none;
+}
+
+.topbar .nav-item:focus {
+    outline: none;
+}
+
+.topbar .dropdown {
+    position: static;
+}
+
+.topbar .dropdown .dropdown-menu {
+    width: calc(100% - 1.5rem);
+    right: 0.75rem;
+}
+
+.navbar {
+    background-color: rgb(187,183,183);
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    z-index: 9998;
+    border-bottom: 1px solid #ddd;
+    height: 116px;
+}
+
+.nav-link.dropdown-toggle {
+  margin-right: -40px;
+}
+
+.nav-link.dropdown-toggle .d-lg-inline {
+    color: black;
+    font-weight: bold;
+}
+
+.topbar .dropdown-list {
+    padding: 0;
+    border: none;
+    overflow: hidden;
+}
+
+.logo-app {
+    width: 120px;
+    height: auto;
+    float: left;
+    margin-top: 4px;
+}
+
+.container > .navbar-brand {
+    margin-left: -30px;
+}
+
+ul .fa-user-circle {
+  font-size: 30px;
+  margin-top: 16px;
+}
+
+li.modif {
+  margin-right: 40px;
+}
+
+/* Navbar Media Query ------------------------------------- */
+
+@media (min-width: 576px) {
+    .topbar .dropdown {
+        position: relative;
+    }
+
+    .topbar .dropdown .dropdown-menu {
+        width: auto;
+        right: 0;
+    }
+
+    .topbar .dropdown-list {
+        width: 20rem !important;
+    }
+
+    .topbar .dropdown-list .dropdown-item .text-truncate {
+        max-width: 13.375rem;
+    }
+
+    .navbar-nav {
+      padding-right: 0;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .logo-app {
+        margin-top: -22px;
+    }
+
+    nav.navbar .navbar-header {
+        width: 100%;
+    }
+
+    nav.navbar::after {
+        width: 100%;
+    }
+
+    ul.navbar-nav.ml-auto.modifier {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    #navbarResponsive {
+        width: 50%;
+    }
+
+    .navbar-nav .fa-user-circle {
+      position: absolute;
+      top: -15px;
+      right: 20px;
+    }
+
+    nav.navbar .search-area {
+        font-size: 0.75em;
+    }
+
+    button.navbar-toggler {
+        position: absolute;
+        right:180px;
+        top: 80px;
+    }
+
+    .container > .navbar-brand {
+        margin-left: -30px;
+    }
+
+    #navbarResponsive {
+        background-color: white;
+        padding-bottom: 0 !important;
+    }
+
+    button.navbar-toggler {
+        margin-top: -40px;
+    }
+}
+
+@media (max-width: 680px) {
+
+    .nav-link.dropdown-toggle {
+        margin-right: 0;
+    }
+
+    .container > .navbar-brand {
+        margin-left: 0;
+    }
+}
+
+/*[ FONTAWESOME ]
+///////////////////////////////////////////////////////////
+*/
+
+.dropdown.show a {
+    color: black !important;
+}
+
+.dropdown.show a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.page-footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: #000000;
+    color: #FFFFFF;
+    margin-top: 10%;
+}
+
+/*[ SILOS ]
+///////////////////////////////////////////////////////////
+*/
+
+div.container-fluid.silos {
+    width: 100% !important;
+    margin-top: 50px;
+    padding: 0!important;
+}
+
+div.container-fluid.silos header {
+    margin-bottom: 60px;
+    margin-left: 120px;
+}
+
+.card.bloc2.parametre {
+    box-shadow: 10px 5px 5px lightgrey;
+}
+
+.card.bloc2.parametre span {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.card.bloc2 .btn {
+    border: 2px solid grey;
+    width: 95%;
+    margin: auto;
+    background-color: rgb(243,235, 254);
+    font-weight: bold;
+}
+
+div .silo {
+    height: 300px;
+    width: 500px !important;
+    margin: 1.7rem !important;
+    position: relative;
+}
+
+.reglage {
+    margin-top: -30px;
+    padding-right: 0;
+}
+
+.reglage > .row {
+    width: 100%;
+    margin-left: 5%;
+}
+
+.bloc1 {
+    background-color: lightgrey;
+    border-radius: 0 0 20px 20px;
+    width: 60px;
+    height: 90%;
+    position: absolute;
+    left: 0;
+}
+
+.bloc1 .quantite-cereale {
+    background-color: rgb(223, 238, 0);
+    width: 54px;
+    height: 50%;
+    margin: auto;
+    border-radius: 0 0 20px 20px;
+    position: relative;
+    top: 49%;
+}
+
+.silos .card.bloc2{
+    width: 70%;
+    height: 200px;
+    position: absolute;
+    right: 0;
+    padding-bottom: 30px;
+}
+
+.card .temperature {
+    background-color: rgb(243,235, 254);
+    border: 2px solid grey;
+    border-radius: 9px;
+    padding: 0;
+    line-height: 2;
+    width: 90%;
+    margin: auto;
+}
+
+.card .temperature p {
+    margin: 0;
+    text-align: center;
+}
+
+.card .type-grain {
+    padding: 0;
+    line-height: 2;
+    width: 90%;
+    margin-top: 15px !important;
+    margin: auto;
+    background-color: rgb(243,235, 254);
+    border-radius: 9px;
+    border: 2px solid grey;
+}
+
+.card .type-grain p {
+    margin: 0;
+    text-align: center;
+}
+
+.card.bloc2 .form-check {
+    margin-top: 25px !important;
+    margin-left: 40px;
+}
+
+.card.bloc2 > span {
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.card.bloc2 p > span {
+    font-style: italic;
+}
+
+/*[ PARCOURS CEREALE ]
+///////////////////////////////////////////////////////////
+*/
+
+.container-fluid .col-sm-2.commande {
+    margin-top: 100px;
+    position: relative;
+    left: 150px;
+    color: darkgrey;
+}
+
+div.cereale.col-sm-8 {
+    margin-top: 50px;
+    position: relative;
+    right: -270px;
+}
+
+div.bloc-principal {
+    z-index: 2;
+}
+
+div.bloc-principal .card .btn {
+  font-size: 0.8rem !important;
+}
+
+div.bloc1-1 {
+    position: absolute;
+    top: 330px;
+    left: 92px;
+    z-index: 3;
+}
+
+div.bloc1-2 {
+    position: absolute;
+    top: 94px;
+    left: 13px;
+    z-index: 3;
+}
+
+div.cereale .card {
+    box-shadow: 10px 5px 5px lightgrey;
+}
+
+div.cereale .card .card-title {
+    margin-bottom: 20px;
+}
+
+div.cereale .card.div1 {
+    position: absolute;
+    top: 39px;
+    left: 200px;
+    z-index: 4;
+}
+
+div.cereale .card.div2 {
+    position: absolute;
+    top: 150px;
+    left: 255px;
+    z-index: 4;
+}

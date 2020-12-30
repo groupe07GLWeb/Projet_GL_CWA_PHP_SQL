@@ -1,0 +1,14 @@
+# Always set these headers.
+Header always set Access-Control-Allow-Origin 'http://localhost:4200'
+Header always set Access-Control-Allow-Methods 'POST, GET, OPTIONS, DELETE, PUT'
+Header always set Access-Control-Max-Age '1000'
+Header always set Access-Control-Allow-Headers 'x-requested-with, Content-Type, origin, authorization, accept, client-security-token'
+<<<<<<< HEAD
+
+=======
+ 
+# Added a rewrite to respond with a 200 SUCCESS on every OPTIONS request.
+>>>>>>> 94372b3dfa20cb8579f30c3ac378e49f0cbd97e7
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !1-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]

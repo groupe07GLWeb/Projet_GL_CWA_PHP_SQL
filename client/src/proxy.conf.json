@@ -1,0 +1,7 @@
+{
+    "/variables": {
+        "target": "http://localhost:1212",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}
