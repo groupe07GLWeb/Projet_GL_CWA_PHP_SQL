@@ -2,7 +2,6 @@
 
 header("Content-Type: application/json; charset=UTF-8");
 //Pour vérifier que ce script php marche, accèder à : http://localhost/Projet_CWA_GL_PHP/php/database.php
-=======
 //Pour vérifier que ce script php marche, accèder à : http://localhost/TestPHP/php/database.php
 
 /*header('Access-Control-Allow-Origin: http://localhost:4200'); 
@@ -15,7 +14,8 @@ define('db_pass', '');
 define('db_name', '');
 function connect (){
 	$connect = mysqli_connect(db_host,db_user,db_pass,db_name);
-	if (mysqli_connect_errno($connect))
+	mysqli_select_db($connect, "projet_cwa_gl" ); //il faut crée votre database avec "projet_cwa_gl" pour nom dans PHPmyAdmin
+	if (mysqli_connect_errno())
 	{
 		die("Failed to connect to MYSQL db:" . mysqli_connect_error());
 	}
@@ -25,7 +25,8 @@ function connect (){
 	//echo("Connection established to Database: " . mysqli_get_host_info($connect));
 	return $connect;
 }
-/*function cors() {
+/*
+function cors() {
     
     // Allow from any origin
     if (isset($_SERVER['HTTP_ORIGIN'])) {
@@ -51,7 +52,7 @@ function connect (){
     
 
     echo "You have CORS!";
-}*/
+}
 //$corsThing = cors();
 
    // echo "You have CORS!";
