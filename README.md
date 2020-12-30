@@ -8,5 +8,5 @@ Il vous reste a: <br/>
 *Lier votre component au service (Prendre pour example: Componenet Variable)<br/>
 *Rajouter les modules en relation avec vos components (Pour variable, vous trouverez le module Variables dans ./client/app/src/Modules/<br/>
 ~~~~~~Attention:~~~~
-Il ne faut pas faire echo dans vos script PHP, le parsing JSON ne pourra pas fonctionner et vous aurez l'erreur: 'SyntaxError: Unexpected token C in JSON at position 0'
+ENLEVEZ  'echo' dans vos script PHP, le parsing JSON ne pourra pas fonctionner et vous aurez l'erreur: 'SyntaxError: Unexpected token C in JSON at position 0'
 Il faut bien vérifier l'URL vers vos script PHP: si vos placez le dossier Projet_GL_CWA_PHP_SQL dans htdocs, il faut rajouter vos scripts dans le dossier php et il faut réecrire les URL vers: localhost\Projet_GL_CWA_PHP_SQL\php\VotreScript.php
