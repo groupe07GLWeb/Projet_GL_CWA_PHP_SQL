@@ -1,10 +1,8 @@
 import { Injectable, Output, EventEmitter } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { HttpClient, HttpHeaders, HttpClientModule } from '@angular/common/http';
-<<<<<<< HEAD
-=======
+
 import { catchError, tap } from 'rxjs/operators';
->>>>>>> 94372b3dfa20cb8579f30c3ac378e49f0cbd97e7
 import {Variables} from '../models/variables';
 
 
@@ -17,12 +15,12 @@ export class Service
 
 	getVariables()
 	{
-		return this.http.get<Variables[]>('http://localhost/TestPHP/php/getVariables.php');
+		return this.http.get<Variables[]>('http://localhost/Projet_GL_CWA_PHP_SQL/php/getVariables.php');
 	}
-
+//A tester
 	deleteVariables(id: Number)
 	{
-		return this.http.delete<Variables[]>('http://localhost/TestPHP/php/sqlDelete.php?id='+id);
+		return this.http.delete<Variables[]>('http://localhost/Projet_GL_CWA_PHP_SQL/php/sqlDelete.php?id='+id);
 	}
 }
   
