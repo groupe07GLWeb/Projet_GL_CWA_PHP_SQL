@@ -1,5 +1,5 @@
 <?php
-<<<<<<< HEAD
+
 header("Content-Type: application/json; charset=UTF-8");
 //Pour vérifier que ce script php marche, accèder à : http://localhost/Projet_CWA_GL_PHP/php/database.php
 =======
@@ -9,7 +9,6 @@ header("Content-Type: application/json; charset=UTF-8");
  header('Access-Control-Allow-Methods: GET, POST, OPTIONS, DELETE, PUT'); 
   header("Access-Control-Allow-Headers: X-Requested-With, Content-Type, origin, authorization, accept, client-security-token");*/
 
->>>>>>> 94372b3dfa20cb8579f30c3ac378e49f0cbd97e7
 define('db_host', 'localhost');
 define('db_user', 'root');
 define('db_pass', '');
@@ -50,15 +49,14 @@ function connect (){
         exit(0);
     }
     
-<<<<<<< HEAD
+
     echo "You have CORS!";
 }*/
 //$corsThing = cors();
-=======
+
    // echo "You have CORS!";
 }
 $corsThing = cors();*/
->>>>>>> 94372b3dfa20cb8579f30c3ac378e49f0cbd97e7
 
 $connexion = connect();
 ?>
