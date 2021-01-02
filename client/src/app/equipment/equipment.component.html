@@ -3,6 +3,7 @@
               <h1 class="h3 mb-2 text-gray-900">Visualisation des équipements</h1>
             </div>
 
+
               <div class="card-deck mb-3" >
 
                 <div class="card shadow">
@@ -10,9 +11,10 @@
 
                     <div class="overlay">
                       <ul class="text">
-                        <li class="h6"> <i class='fas fa-times-circle text-danger'></i> Panne au niveau du convoyeur</li>
-                        <li class="h6"><i class='fas fa-times-circle text-danger'></i> Panne au niveau du convoyeur</li>
-                        <li class="h6"><i class='fas fa-times-circle text-danger'></i> Panne au niveau du convoyeur</li> 
+                        <li *ngIf="equipements[0].etat == 1" class="h6"> <i class='fas fa-times-circle text-danger'></i> Panne au niveau du silo</li>
+                       <!-- <li *ngIf="equipements[getindexEquipment('Nettoyeur_Separateur')].etat == 1" class="h6"> <i class='fas fa-times-circle text-danger'></i> Panne au niveau du convoyeur</li>
+                         <li class="h6"><i class='fas fa-times-circle text-danger'></i> Panne au niveau du convoyeur</li>
+                        <li class="h6"><i class='fas fa-times-circle text-danger'></i> Panne au niveau du convoyeur</li> -->
                       </ul>
                     <button type="button" class="btn btn-success btn-sm fiche"><i class=" fas fa-plus"></i> <small> VOIR FICHE ENTRETIEN</small></button>
                     </div>
@@ -20,8 +22,8 @@
                   </div>
                   <div class="card-footer">
                     <small class="h6 text-center">Nettoyeur Séparateur</small>
-                    <i class='fas fa-times-circle text-danger float-right' style="font-size: 30px;"></i>
-                    <i class='fas fa-check-circle text-success float-right' style="font-size: 30px;"></i>
+                    <i *ngIf="equipements[0].etat == 1" class='fas fa-times-circle text-danger float-right' style="font-size: 30px;"></i>
+                    <i *ngIf="equipements[0].etat == 0" class='fas fa-check-circle text-success float-right' style="font-size: 30px;"></i> 
                   </div>
                 </div>
                
@@ -31,9 +33,10 @@
                   <img class="image card-img-top" src="../../assets/Web/img/silo.jpg" alt="Silo">
                   <div class="overlay">
                     <ul class="text">
-                      <li class="h6"> <i class='fas fa-times-circle text-danger'></i> Panne au niveau du silo</li>
-                      <li class="h6"><i class='fas fa-times-circle text-danger'></i> Panne au niveau du silo</li>
-                      <li class="h6"><i class='fas fa-times-circle text-danger'></i> Panne au niveau du silo</li> 
+                      <li *ngIf="equipements[1].etat == 1" class="h6"> <i class='fas fa-times-circle text-danger'></i> Panne au niveau du silo</li>
+                     <!-- <li *ngIf="equipements[getindexEquipment('Silo')].etat == 1" class="h6"> <i class='fas fa-times-circle text-danger'></i> Panne au niveau du silo</li>
+                       <li class="h6"><i class='fas fa-times-circle text-danger'></i> Panne au niveau du silo</li>
+                      <li class="h6"><i class='fas fa-times-circle text-danger'></i> Panne au niveau du silo</li> -->
                     </ul>
                     <button type="button" class="btn btn-success btn-sm fiche"><i class=" fas fa-plus"></i> <small> VOIR FICHE ENTRETIEN</small></button>
                   </div>
@@ -41,8 +44,10 @@
                   </div>
                   <div class="card-footer">
                     <small class="h6 text-center">Silo</small>
-                    <i class='fas fa-times-circle text-danger float-right' style="font-size: 30px;"></i>
-                    <i class='fas fa-check-circle text-success float-right' style="font-size: 30px;"></i>
+                    <i *ngIf="equipements[1].etat == 1" class='fas fa-times-circle text-danger float-right' style="font-size: 30px;"></i>
+                    <i *ngIf="equipements[1].etat == 0" class='fas fa-check-circle text-success float-right' style="font-size: 30px;"></i> 
+                   <!-- <i *ngIf="equipements[getindexEquipment('Silo')].etat == 1" class='fas fa-times-circle text-danger float-right' style="font-size: 30px;"></i>
+                    <i *ngIf="equipements[getindexEquipment('Silo')].etat == 0" class='fas fa-check-circle text-success float-right' style="font-size: 30px;"></i> -->
                   </div>
                 </div>
 
@@ -50,9 +55,10 @@
                   <img class="image card-img-top" src=".../../assets/Web/img/boisseau.jpg" alt="Boisseaux de chargement">
                   <div class="overlay">
                     <ul class="text">
-                      <li class="h6"> <i class='fas fa-times-circle text-danger'></i> Panne au niveau des boisseaux</li>
-                      <li class="h6"><i class='fas fa-times-circle text-danger'></i> Panne au niveau des boisseaux</li>
-                      <li class="h6"><i class='fas fa-times-circle text-danger'></i> Panne au niveau des boisseaux</li> 
+                      <li *ngIf="equipements[2].etat == 1" class="h6"> <i class='fas fa-times-circle text-danger'></i> Panne au niveau des boisseaux</li>
+                     <!-- <li *ngIf="equipements[getindexEquipment('Boisseaux')].etat == 1" class="h6"> <i class='fas fa-times-circle text-danger'></i> Panne au niveau des boisseaux</li>       
+                        <li class="h6"><i class='fas fa-times-circle text-danger'></i> Panne au niveau des boisseaux</li>
+                      <li class="h6"><i class='fas fa-times-circle text-danger'></i> Panne au niveau des boisseaux</li> -->
                     </ul>
                     <button type="button" class="btn btn-success btn-sm fiche"><i class=" fas fa-plus"></i> <small> VOIR FICHE ENTRETIEN</small></button>
                   </div>
@@ -60,22 +66,24 @@
                   </div>
                   <div class="card-footer">
                     <small class="h6 text-center">Boisseaux de chargement</small>
-                    <i class='fas fa-times-circle text-danger float-right' style="font-size: 30px;"></i>
-                    <i class='fas fa-check-circle text-success float-right' style="font-size: 30px;"></i>
+                    <i *ngIf="equipements[2].etat == 1" class='fas fa-times-circle text-danger float-right' style="font-size: 30px;"></i>
+                    <i *ngIf="equipements[2].etat == 0" class='fas fa-check-circle text-success float-right' style="font-size: 30px;"></i> 
+                   <!-- <i *ngIf="equipements[getindexEquipment('Boisseaux')].etat == 1" class='fas fa-times-circle text-danger float-right' style="font-size: 30px;"></i>
+                    <i *ngIf="equipements[getindexEquipment('Boisseaux')].etat == 0" class='fas fa-check-circle text-success float-right' style="font-size: 30px;"></i> -->
                   </div>
 
                 </div>
-
-              </div>
+             </div>
 
               <div class="card-deck">
                 <div class="card shadow">
                   <img class="image card-img-top" src="../../assets/Web/img/roulage.jpg" alt="Grille de roulage">
                   <div class="overlay">
                     <ul class="text">
-                      <li class="h6"> <i class='fas fa-times-circle text-danger'></i> Panne au niveau du roulage</li>
-                      <li class="h6"><i class='fas fa-times-circle text-danger'></i> Panne au niveau du roulage</li>
-                      <li class="h6"><i class='fas fa-times-circle text-danger'></i> Panne au niveau du roulage</li> 
+                      <li *ngIf="equipements[3].etat == 1" class="h6"> <i class='fas fa-times-circle text-danger'></i> Panne au niveau du roulage</li>
+                      <!--<li *ngIf="equipements[getindexEquipment('Grille_Roulage')].etat == 1" class="h6"> <i class='fas fa-times-circle text-danger'></i> Panne au niveau du roulage</li>
+                       <li class="h6"><i class='fas fa-times-circle text-danger'></i> Panne au niveau du roulage</li>
+                      <li class="h6"><i class='fas fa-times-circle text-danger'></i> Panne au niveau du roulage</li> -->
                     </ul>
                     <button type="button" class="btn btn-success btn-sm fiche"><i class=" fas fa-plus"></i> <small> VOIR FICHE ENTRETIEN</small></button>
                   </div>
@@ -83,8 +91,10 @@
                   </div>
                   <div class="card-footer">
                     <small class="h6 text-center">Grille de roulage</small>
-                    <i class='fas fa-times-circle text-danger float-right' style="font-size: 30px;"></i>
-                    <i class='fas fa-check-circle text-success float-right' style="font-size: 30px;"></i>
+                    <i *ngIf="equipements[3].etat == 1" class='fas fa-times-circle text-danger float-right' style="font-size: 30px;"></i>
+                    <i *ngIf="equipements[3].etat == 0" class='fas fa-check-circle text-success float-right' style="font-size: 30px;"></i> 
+                   <!-- <i *ngIf="equipements[getindexEquipment('Grille_Roulage')].etat == 1" class='fas fa-times-circle text-danger float-right' style="font-size: 30px;"></i>
+                    <i *ngIf="equipements[getindexEquipment('Grille_Roulage')].etat == 0" class='fas fa-check-circle text-success float-right' style="font-size: 30px;"></i> -->
                   </div>
                 </div>
 
@@ -93,9 +103,10 @@
                   <img class="image card-img-top" src="../../assets/Web/img/tremie.jpg" alt="Trémie de reception">
                   <div class="overlay">
                     <ul class="text">
-                      <li class="h6"> <i class='fas fa-times-circle text-danger'></i> Panne au niveau du trémie</li>
-                      <li class="h6"><i class='fas fa-times-circle text-danger'></i> Panne au niveau du trémie</li>
-                      <li class="h6"><i class='fas fa-times-circle text-danger'></i> Panne au niveau du trémie</li> 
+                      <li *ngIf="equipements[4].etat == 1" class="h6"> <i class='fas fa-times-circle text-danger'></i> Panne au niveau du trémie</li>
+                     <!-- <li *ngIf="equipements[getindexEquipment('Tremie')].etat == 1" class="h6"> <i class='fas fa-times-circle text-danger'></i> Panne au niveau du trémie</li>
+                       <li class="h6"><i class='fas fa-times-circle text-danger'></i> Panne au niveau du trémie</li>
+                      <li class="h6"><i class='fas fa-times-circle text-danger'></i> Panne au niveau du trémie</li> -->
                     </ul>
                     <button type="button" class="btn btn-success btn-sm fiche"><i class=" fas fa-plus"></i> <small> VOIR FICHE ENTRETIEN</small></button>
                   </div>
@@ -103,8 +114,10 @@
                   </div>
                   <div class="card-footer">
                     <small class="h6 text-center">Trémie de reception</small>
-                    <i class='fas fa-times-circle text-danger float-right' style="font-size: 30px;"></i>
-                    <i class='fas fa-check-circle text-success float-right' style="font-size: 30px;"></i>
+                    <i *ngIf="equipements[4].etat == 1" class='fas fa-times-circle text-danger float-right' style="font-size: 30px;"></i>
+                    <i *ngIf="equipements[4].etat == 0" class='fas fa-check-circle text-success float-right' style="font-size: 30px;"></i> 
+                   <!-- <i *ngIf="equipements[getindexEquipment('Tremie')].etat == 1" class='fas fa-times-circle text-danger float-right' style="font-size: 30px;"></i>
+                    <i *ngIf="equipements[getindexEquipment('Tremie')].etat == 0" class='fas fa-check-circle text-success float-right' style="font-size: 30px;"></i> -->
 
                   </div>
                 </div>
@@ -113,9 +126,10 @@
                   <img class=" image card-img-top" src="../../assets/Web/img/elevateur.png" alt="Élevateur à godets ">
                   <div class="overlay">
                     <ul class="text">
-                      <li class="h6"> <i class='fas fa-times-circle text-danger'></i> Panne au niveau de l'élevateur</li>
+                      <li *ngIf="equipements[5].etat == 1" class="h6"> <i class='fas fa-times-circle text-danger'></i> Panne au niveau de l'élevateur</li>
+                     <!-- <li *ngIf="equipements[getindexEquipment('Elevateur')].etat == 1" class="h6"> <i class='fas fa-times-circle text-danger'></i> Panne au niveau de l'élevateur</li>
                       <li class="h6"><i class='fas fa-times-circle text-danger'></i> Panne au niveau de l'élevateur</li>
-                      <li class="h6"><i class='fas fa-times-circle text-danger'></i> Panne au niveau de l'élevateur</li> 
+                      <li class="h6"><i class='fas fa-times-circle text-danger'></i> Panne au niveau de l'élevateur</li> -->
                     </ul>
                     <button type="button" class="btn btn-success btn-sm fiche"><i class=" fas fa-plus"></i> <small> VOIR FICHE ENTRETIEN</small></button>
                   </div>
@@ -123,8 +137,10 @@
                   </div>
                   <div class="card-footer">
                     <small class="h6 text-center">Élevateur à godets</small>
-                    <i class='fas fa-times-circle text-danger float-right' style="font-size: 30px;"></i>
-                    <i class='fas fa-check-circle text-success float-right' style="font-size: 30px;"></i>
+                    <i *ngIf="equipements[5].etat == 1" class='fas fa-times-circle text-danger float-right' style="font-size: 30px;"></i>
+                    <i *ngIf="equipements[5].etat == 0" class='fas fa-check-circle text-success float-right' style="font-size: 30px;"></i> 
+                   <!-- <i *ngIf="equipements[getindexEquipment('Elevateur')].etat == 1" class='fas fa-times-circle text-danger float-right' style="font-size: 30px;"></i>
+                    <i *ngIf="equipements[getindexEquipment('Elevateur')].etat == 0" class='fas fa-check-circle text-success float-right' style="font-size: 30px;"></i> -->
 
                   </div>
                 </div>

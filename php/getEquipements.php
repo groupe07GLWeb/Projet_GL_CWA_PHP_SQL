@@ -1,5 +1,5 @@
 <?php
-//Testez ce script en allant à http://localhost/Projet_CWA_GL_PHP/php/getEquipements.php
+//Testez ce script en allant à http://localhost/Projet_GL_CWA_PHP_SQL/php/getEquipements.php
 
 require 'database.php';
 //structures de données pour stocker le résultat des requêtes SQL
@@ -21,9 +21,9 @@ if ($result = mysqli_query($connexion,$sqlAllEquipements ))
 		$equipements[$index]['etat'] = $row['etat'];
 		$index++;
 	}
-	echo "equipements";
+	//echo "equipements";
 echo json_encode($equipements);
-echo "\n";
+//echo "\n";
 
 }else{
 	http_response_code(404);

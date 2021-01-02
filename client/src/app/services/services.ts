@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaders, HttpClientModule } from '@angular/common/http'
 
 import { catchError, tap } from 'rxjs/operators';
 import {Variables} from '../models/variables';
+import {Equipements} from '../models/equipements';
 
 
 @Injectable({providedIn: 'root'})
@@ -21,6 +22,16 @@ export class Service
 	deleteVariables(id: Number)
 	{
 		return this.http.delete<Variables[]>('http://localhost/Projet_GL_CWA_PHP_SQL/php/sqlDelete.php?id='+id);
+	}
+
+	getEquipements()
+	{
+		return this.http.get<Equipements[]>('http://localhost/Projet_GL_CWA_PHP_SQL/php/getEquipements.php');
+	}
+
+	deleteEquipements(id: number)
+	{
+		return this.http.delete<Equipements[]>('http://localhost/Projet_GL_CWA_PHP_SQL/php/sqlDelete.php?id='+id);
 	}
 }
   
