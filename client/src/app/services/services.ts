@@ -1,6 +1,6 @@
 import { Injectable, Output, EventEmitter } from '@angular/core';
 import { map } from 'rxjs/operators';
-import { HttpClient, HttpHeaders, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpClientModule, HttpParams } from '@angular/common/http';
 
 import { catchError, tap } from 'rxjs/operators';
 import {Variables} from '../models/variables';
@@ -27,6 +27,22 @@ export class Service
 	getEquipements()
 	{
 		return this.http.get<Equipements[]>('http://localhost/Projet_GL_CWA_PHP_SQL/php/getEquipements.php');
+	}
+
+	updateEquipements(equipement: Equipements)
+	{
+		
+		const headers = new HttpHeaders()
+    	.set("Content-Type", "application/json");
+
+		return this.http.put<Equipements>('http://localhost/Projet_GL_CWA_PHP_SQL/php/updateEquipements.php',
+		{
+			"id": equipement.id.toString(),
+			"nom": equipement.nom_equipement.toString(),
+			"op": equipement.operation.toString(),
+			"etat": equipement.etat.toString()
+		}, 
+		{headers: headers});
 	}
 
 	deleteEquipements(id: number)
