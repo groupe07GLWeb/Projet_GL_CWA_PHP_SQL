@@ -20,7 +20,8 @@ $sql = "SELECT * FROM `utilisateur` WHERE `id` ='{$id}' LIMIT 1";
   $utilisateurs[$index]['email'] = $row['email'];
   $utilisateurs[$index]['role'] = $row['role'];
 
-  echo json_encode($utilisateurs);
+  //echo 
+  json_encode($utilisateurs);
 }
 else
 {
