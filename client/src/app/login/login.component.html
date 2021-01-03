@@ -31,7 +31,7 @@
 				               </span>
 			               </div>
 
-			               <form  class="login100-form validate-form" [formGroup]="angForm" (ngSubmit)="postdata(angForm)" >
+			               <form  class="login100-form validate-form" [formGroup]="angForm" (ngSubmit)="postdata(angForm)" autocomplete="off" >
 				               <div class="wrap-input100 m-b-26" data-validate="Username is required">
 					               <span class="label-input100">Identifiant</span>
 						               <input class="input100" type="email" name="email" formControlName="email" placeholder="Entrez votre pseudo">
