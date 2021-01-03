@@ -6,13 +6,21 @@ import { LayoutComponent } from './layout/layout.component';
 import { ParcourscerealeComponent } from './parcourscereale/parcourscereale.component';
 import { SiloComponent } from './silo/silo.component';
 import { VariablesComponent } from './variables/variables.component';
+import { GestionUtilisateursComponent } from './gestion-utilisateurs/gestion-utilisateurs.component';
+import { AddUserComponent } from './add-user/add-user.component';
+import { ModifierUserComponent } from './modifier-user/modifier-user.component';
 
 
 
 
 const routes: Routes = [
     {path:"",component:LoginComponent },
+    {path:"login",component:LoginComponent },
+    {path:"equipmentTech",component:EquipmentComponent },
     {path:"",component:LayoutComponent, children :[
+    {path:"gestionUtilisateurs",component: GestionUtilisateursComponent},  
+    {path:"addUser",component: AddUserComponent}, 
+    {path:"modifierUser/:id", component: ModifierUserComponent},
     {path:"equipment",component:EquipmentComponent },
     {path:"parcereale",component:ParcourscerealeComponent},
     {path:"silo",component:SiloComponent},

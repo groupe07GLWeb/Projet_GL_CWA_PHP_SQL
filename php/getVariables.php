@@ -1,11 +1,11 @@
 <?php
-//Testez ce script en allant à http://localhost/TestPHP/php/getVariables.php
+//Testez ce script en allant à http://localhost/Projet_GL_CWA_PHP_SQL/php/getVariables.php
 require 'database.php';
 //structures de données pour stocker le résultat des requêtes SQL
 $variables = [];
 $sqlAllVariables = "select * from variable";
 
- mysqli_select_db($connexion,'projet_cwa_gl');
+ //mysqli_select_db($connexion,'projet_cwa_gl');
 
 //Pour les variables
 if ($result = mysqli_query($connexion,$sqlAllVariables))

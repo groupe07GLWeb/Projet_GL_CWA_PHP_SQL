@@ -31,21 +31,21 @@
 				               </span>
 			               </div>
 
-			               <form action="" method="post" class="login100-form validate-form">
+			               <form  class="login100-form validate-form" [formGroup]="angForm" (ngSubmit)="postdata(angForm)" >
 				               <div class="wrap-input100 m-b-26" data-validate="Username is required">
 					               <span class="label-input100">Identifiant</span>
-						               <input class="input100" type="text" name="login" placeholder="Entrez votre pseudo">
+						               <input class="input100" type="email" name="email" formControlName="email" placeholder="Entrez votre pseudo">
 					               <span class="focus-input100"></span>
 				               </div>
 
 				               <div class="wrap-input100 m-b-18" data-validate = "Password is required">
 					               <span class="label-input100">mot de passe</span>
-						               <input class="input100" type="password" name="password" placeholder="Entrez votre mot de passe">
+						               <input class="input100" type="password" name="Password" formControlName="password" placeholder="Entrez votre mot de passe">
 					               <span class="focus-input100"></span>
                        </div>
 
 				               <div class="container-login100-form-btn">
-					               <button type="submit" class="login100-form-btn">
+					               <button type="submit" class="login100-form-btn"  [disabled]="angForm.invalid" >
 						               Connexion
 					               </button>
                          <img class="img-fluid logo" src="../../assets/Web/img/logo.png" />

@@ -2,10 +2,10 @@
 -- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 28, 2020 at 01:31 PM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.11
+-- Hôte : localhost
+-- Généré le : Dim 03 jan. 2021 à 16:36
+-- Version du serveur :  10.4.14-MariaDB
+-- Version de PHP : 7.2.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `projet_cwa_gl`
+-- Base de données : `projet_cwa_gl`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `anomalie`
+-- Structure de la table `anomalie`
 --
 
 CREATE TABLE `anomalie` (
@@ -39,7 +39,7 @@ CREATE TABLE `anomalie` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cereale`
+-- Structure de la table `cereale`
 --
 
 CREATE TABLE `cereale` (
@@ -55,7 +55,7 @@ CREATE TABLE `cereale` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `equipement`
+-- Structure de la table `equipement`
 --
 
 CREATE TABLE `equipement` (
@@ -68,7 +68,7 @@ CREATE TABLE `equipement` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `operation`
+-- Structure de la table `operation`
 --
 
 CREATE TABLE `operation` (
@@ -81,29 +81,29 @@ CREATE TABLE `operation` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `utilisateur`
+-- Structure de la table `utilisateur`
 --
 
 CREATE TABLE `utilisateur` (
   `id` int(11) NOT NULL,
   `nom` varchar(100) NOT NULL,
   `prenom` varchar(100) NOT NULL,
-  `mdp` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `role` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `utilisateur`
+-- Déchargement des données de la table `utilisateur`
 --
 
-INSERT INTO `utilisateur` (`id`, `nom`, `prenom`, `mdp`, `email`, `role`) VALUES
-(1, 'Dupont', 'Jean', 'dupont-jean', 'jean.dupont@gmail.com', 'adminSystem');
+INSERT INTO `utilisateur` (`id`, `nom`, `prenom`, `password`, `email`, `role`) VALUES
+(1, 'Dupont', 'Jean', 'admin', 'jean.dupont@gmail.com', 'Administrateur-Système');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `variable`
+-- Structure de la table `variable`
 --
 
 CREATE TABLE `variable` (
@@ -115,7 +115,7 @@ CREATE TABLE `variable` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `variable`
+-- Déchargement des données de la table `variable`
 --
 
 INSERT INTO `variable` (`id`, `temperature`, `humidite`, `poussiere`, `insecticide`) VALUES
@@ -123,81 +123,81 @@ INSERT INTO `variable` (`id`, `temperature`, `humidite`, `poussiere`, `insectici
 (2, 13, 0.04, 60, 0.9);
 
 --
--- Indexes for dumped tables
+-- Index pour les tables déchargées
 --
 
 --
--- Indexes for table `anomalie`
+-- Index pour la table `anomalie`
 --
 ALTER TABLE `anomalie`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `cereale`
+-- Index pour la table `cereale`
 --
 ALTER TABLE `cereale`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `equipement`
+-- Index pour la table `equipement`
 --
 ALTER TABLE `equipement`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `operation`
+-- Index pour la table `operation`
 --
 ALTER TABLE `operation`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `utilisateur`
+-- Index pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `variable`
+-- Index pour la table `variable`
 --
 ALTER TABLE `variable`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
--- AUTO_INCREMENT for table `anomalie`
+-- AUTO_INCREMENT pour la table `anomalie`
 --
 ALTER TABLE `anomalie`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `cereale`
+-- AUTO_INCREMENT pour la table `cereale`
 --
 ALTER TABLE `cereale`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `equipement`
+-- AUTO_INCREMENT pour la table `equipement`
 --
 ALTER TABLE `equipement`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `operation`
+-- AUTO_INCREMENT pour la table `operation`
 --
 ALTER TABLE `operation`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `utilisateur`
+-- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `variable`
+-- AUTO_INCREMENT pour la table `variable`
 --
 ALTER TABLE `variable`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;

@@ -6,7 +6,7 @@ require 'database.php';
 $equipements = [];
 $sqlAllEquipements = "select * from equipement";
 
- mysqli_select_db($connexion,'projet_cwa_gl');
+ //mysqli_select_db($connexion,'projet_cwa_gl');
 
 //Pour les equipements
 

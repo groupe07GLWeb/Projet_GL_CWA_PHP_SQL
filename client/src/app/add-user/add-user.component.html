@@ -1,0 +1,49 @@
+<div class="container-fluid">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+      <h1 class="h3 mb-2 text-gray-900">Création / Modification d'un compte utilisateur</h1>
+    </div>
+
+    <form class="justify-content-center"  [formGroup]="addForm" (ngSubmit)="onSubmit()" >
+      <div class="form-group row">
+        <label for="formGroupExampleInput" class="col-sm-3 offset-md-2 col-form-label">Nom</label>
+        <div class="col-sm-5">
+          <input type="text"   name="nom" formControlName="nom" autocomplete="off"  class="form-control" id="nom" placeholder="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="formGroupExampleInput" class="col-sm-3 offset-md-2 col-form-label">Prénom</label>
+        <div class="col-sm-5">
+          <input type="text"  name="prenom" formControlName="prenom"  autocomplete="off" class="form-control" id="prenom" placeholder="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-3 offset-md-2 col-form-label">Mot de passe</label>
+        <div class="col-sm-5">
+          <input type="password"  name="password" formControlName="password" class="form-control" id="password">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="formGroupExampleInput" class="col-sm-3 offset-md-2 col-form-label">Adresse email</label>
+        <div class="col-sm-5">
+          <input type="text" type="email" name="email" formControlName="email" autocomplete="off"  class="form-control" id="email" placeholder="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="staticEmail"class="col-sm-3 offset-md-2 col-form-label">Rôle</label>
+          <div class="col-sm-5">
+            <select formControlName="role" class="form-control" id="role">
+              <option  >Administrateur-Système</option>
+              <option  >Controleur</option>
+              <option  >Technicien</option>
+            </select>
+          </div>
+      </div>
+      
+      
+      <div class="form-group row">
+        <button  class="btn btn-primary col-md-2 offset-md-8 mt-4">Enregistrer</button>
+      </div>
+
+      
+    </form>
+  </div>
