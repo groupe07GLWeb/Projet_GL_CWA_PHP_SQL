@@ -4,7 +4,7 @@
 require 'database.php';
 //structures de données pour stocker le résultat des requêtes SQL
 $data = file_get_contents("php://input");
-echo $data;
+//echo $data;
 $equipement = json_decode($data);
 
 mysqli_select_db($connexion,'projet_cwa_gl');

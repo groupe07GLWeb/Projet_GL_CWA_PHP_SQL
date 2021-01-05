@@ -3,7 +3,7 @@ import  {Service} from '../services/services';
 import {Equipements} from '../models/equipements';
 import { Routes, RouterModule } from '@angular/router';
 import {Operation} from '../models/operation';
-import { isNgTemplate } from '@angular/compiler';
+import { isNgTemplate, VariableBinding } from '@angular/compiler';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -14,6 +14,7 @@ import { Observable } from 'rxjs';
 export class EquipmentComponent implements OnInit, Operation {
 
   equipements: Equipements[];
+  selectedEquipement : Equipements;
 
   constructor(private service: Service)
   {
@@ -25,6 +26,16 @@ export class EquipmentComponent implements OnInit, Operation {
   		(data: Equipements[]) =>
   		{
         this.equipements = data;
+        /*let index = 3;
+        for (let i = 0; i< this.equipements.length; i++){
+            this.equipements[i].variable.id = index;
+            this.equipements[i].variable.temperature = 14;
+            this.equipements[i].variable.humidite = 0.02;
+            this.equipements[i].variable.poussiere = 25;
+            this.equipements[i].variable.insecticide = 0.4;
+            index++;
+        }*/
+       
        // this.updateEquipement(this.equipements[0]);
       }
       

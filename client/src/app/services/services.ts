@@ -108,7 +108,7 @@ export class Service
 
 	updateEquipements(equipement: Equipements)
 	{
-		
+		//console.log(equipement);
 		const headers = new HttpHeaders()
     	.set("Content-Type", "application/json");
 

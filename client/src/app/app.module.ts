@@ -18,6 +18,7 @@ import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddUserComponent } from './add-user/add-user.component';
 import { GestionUtilisateursComponent } from './gestion-utilisateurs/gestion-utilisateurs.component';
 import { ModifierUserComponent } from './modifier-user/modifier-user.component';
+import { AddFicheEntretienComponent } from './add-fiche-entretien/add-fiche-entretien.component';
 
 
 
@@ -34,7 +35,8 @@ import { ModifierUserComponent } from './modifier-user/modifier-user.component';
     VariablesComponent,
     AddUserComponent,
     GestionUtilisateursComponent,
-    ModifierUserComponent],
+    ModifierUserComponent,
+    AddFicheEntretienComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
