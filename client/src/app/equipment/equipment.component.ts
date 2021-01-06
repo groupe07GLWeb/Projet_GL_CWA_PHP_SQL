@@ -13,6 +13,7 @@ import { Observable } from 'rxjs';
 })
 export class EquipmentComponent implements OnInit, Operation {
 
+  equipmentsLoaded: Promise<boolean>;
   equipements: Equipements[];
   selectedEquipement : Equipements;
 
@@ -26,17 +27,15 @@ export class EquipmentComponent implements OnInit, Operation {
   		(data: Equipements[]) =>
   		{
         this.equipements = data;
-        /*let index = 3;
+        this.equipmentsLoaded = Promise.resolve(true);
+
+        let index = 3;
         for (let i = 0; i< this.equipements.length; i++){
-            this.equipements[i].variable.id = index;
-            this.equipements[i].variable.temperature = 14;
-            this.equipements[i].variable.humidite = 0.02;
-            this.equipements[i].variable.poussiere = 25;
-            this.equipements[i].variable.insecticide = 0.4;
-            index++;
-        }*/
+          this.equipements[i].variable = {id : index, temperature: 0, humidite: 0.00, poussiere: 0, insecticide: 0.0};
+          index++;
+        }
+        //this.updateEquipement(this.equipements[0]);
        
-       // this.updateEquipement(this.equipements[0]);
       }
       
   	)
@@ -47,38 +46,15 @@ export class EquipmentComponent implements OnInit, Operation {
     return this.equipements.findIndex(x => x.nom_equipement == e);
   }
 
-  /*getEtatEquipement(e : string): Promise<T>{
-    return new Promise((resolve,reject) => {
-      setTimeout(() => {
-        resolve(this.equipements.findIndex(x => x.nom_equipements == e));
-      }, 1000);
-    }
-    //return (this.equipements[this.getindexEquipment(e)].etat) ? this.equipements : null
-  }*/
-
-  /* getindexEquipment(e : string){
-    //console.log(this.equipements.toString());
-    let etatObservable = new Observable((observer) => {
-      let tamer = this.equipements.findIndex(x => x.nom_equipements == e)
-      observer.next(tamer);
-      observer.complete();
-  });
-  let a;
-  etatObservable.subscribe({
-    next(value) { a = value; },
-    complete() { console.log("C'est fini!"); }
-  }) 
-    return a;   
-  }*/
-
   //appeler la méthode update comme suit: (click)= "updateEquipement(new equipement)" dans votre code HTML du component
   updateEquipement(equipement:Equipements): void
   {
+    console.log(equipement.id);
     this.service.updateEquipements(equipement).subscribe
     (
       (data) =>
       {
-        this.equipements[equipement.id] = equipement;
+        this.equipements[equipement.id-1] = equipement;
       }
     )
   }

@@ -10,8 +10,8 @@ $equipement = json_decode($data);
 mysqli_select_db($connexion,'projet_cwa_gl');
 
 $id = mysqli_real_escape_string($connexion, (int)$equipement->id);
-$nom_equipement = mysqli_real_escape_string($connexion, $equipement->nom_equipement);
-$operation = mysqli_real_escape_string($connexion, $equipement->operation);
+$nom_equipement = mysqli_real_escape_string($connexion, $equipement->nom);
+$operation = mysqli_real_escape_string($connexion, $equipement->op);
 $etat = mysqli_real_escape_string($connexion, (int)$equipement->etat);
 
 $sqlupdate = "UPDATE equipement SET operation = '$operation', etat = '$etat' where id = '{$id}'";

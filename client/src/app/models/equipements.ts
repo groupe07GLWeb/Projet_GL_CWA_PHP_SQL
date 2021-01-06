@@ -7,7 +7,7 @@ public nom_equipement: string;
 public operation: string;
 public etat: number;
 //public anomalies : Anomalies[];
-public variable : Variables;
+public variable? : Variables;
 //public cereales : Cereales;
 
 
