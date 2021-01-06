@@ -65,6 +65,19 @@ CREATE TABLE `equipement` (
   `etat` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+
+--
+-- Déchargement des données de la table `equipement`
+--
+
+INSERT INTO `equipement` (`id`, `nom_equipement`, `operation`, `etat`) 
+VALUES (1, 'Nettoyeur_Separateur', 'none', '1'), 
+(2, 'Silo', 'none', '1'), 
+(3, 'Boisseaux', 'none', '0'), 
+(4, 'Grille_Roulage', 'none', '1'), 
+(5, 'Tremie', 'none', '0'), 
+(6, 'Elevateur', 'none', '1');
+
 -- --------------------------------------------------------
 
 --
