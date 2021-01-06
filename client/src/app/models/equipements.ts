@@ -1,6 +1,6 @@
 import { Variable } from "@angular/compiler/src/render3/r3_ast";
 import { Variables } from "./variables";
-
+//model of an equipment
 export class Equipements {
 public id: number;
 public nom_equipement: string;

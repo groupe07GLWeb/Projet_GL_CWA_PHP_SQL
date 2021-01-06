@@ -11,16 +11,19 @@ import { Observable } from 'rxjs';
   templateUrl: './equipment.component.html',
   styleUrls: ['./equipment.component.css']
 })
+//Component for display the equipments
 export class EquipmentComponent implements OnInit, Operation {
 
-  equipmentsLoaded: Promise<boolean>;
-  equipements: Equipements[];
-  selectedEquipement : Equipements;
+  equipmentsLoaded: Promise<boolean>; //display the page content when all the equipment is loaded locally
+  equipements: Equipements[];//the equipments
+  selectedEquipment : Equipements;//the equipment choose by the technician for write a report
 
   constructor(private service: Service)
   {
+    this.selectedEquipment = null;
   }
 
+  //loads the equipments available in the database at initialisation
   ngOnInit(): void {
     this.service.getEquipements().subscribe
   	(
@@ -28,28 +31,31 @@ export class EquipmentComponent implements OnInit, Operation {
   		{
         this.equipements = data;
         this.equipmentsLoaded = Promise.resolve(true);
-
+        
         let index = 3;
         for (let i = 0; i< this.equipements.length; i++){
           this.equipements[i].variable = {id : index, temperature: 0, humidite: 0.00, poussiere: 0, insecticide: 0.0};
           index++;
         }
-        //this.updateEquipement(this.equipements[0]);
        
       }
       
   	)
   }
+  selectEquipment(e: Equipements){
+    this.selectedEquipment = e;
+  }
 
+  //return the index of an equipment present in the local variable
   getindexEquipment(e : string){
 
     return this.equipements.findIndex(x => x.nom_equipement == e);
   }
 
-  //appeler la méthode update comme suit: (click)= "updateEquipement(new equipement)" dans votre code HTML du component
+  //update an equipment in the database
   updateEquipement(equipement:Equipements): void
   {
-    console.log(equipement.id);
+    this.selectedEquipment = null;
     this.service.updateEquipements(equipement).subscribe
     (
       (data) =>

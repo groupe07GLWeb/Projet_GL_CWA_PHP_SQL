@@ -11,11 +11,11 @@
 
                     <div class="overlay">
                       <ul class="text">
-                        <li class="h6"><i class='fas fa-times-circle text-danger'></i> Température : {{equipements[getindexEquipment('Nettoyeur_Separateur')].variable.temperature}} ; Humidité : {{equipements[getindexEquipment('Nettoyeur_Separateur')].variable.humidite}}</li> 
-                        <li class="h6"><i class='fas fa-times-circle text-danger'></i> Poussière : {{equipements[getindexEquipment('Nettoyeur_Separateur')].variable.poussiere}} ; Taux insecticide : {{equipements[getindexEquipment('Nettoyeur_Separateur')].variable.insecticide}}</li> 
+                        <li class="h6"><i class='fas '></i> Température : {{equipements[getindexEquipment('Nettoyeur_Separateur')].variable.temperature}} ; Humidité : {{equipements[getindexEquipment('Nettoyeur_Separateur')].variable.humidite}}</li> 
+                        <li class="h6"><i class='fas '></i> Poussière : {{equipements[getindexEquipment('Nettoyeur_Separateur')].variable.poussiere}} ; Taux insecticide : {{equipements[getindexEquipment('Nettoyeur_Separateur')].variable.insecticide}}</li> 
                         <li *ngIf="equipements[getindexEquipment('Nettoyeur_Separateur')].etat == 0" class="h6"> <i class='fas fa-times-circle text-danger'></i> Panne au niveau du nettoyeur séparateur</li>
                       </ul>
-                    <button type="button" class="btn btn-success btn-sm fiche"><i class=" fas fa-plus"></i> <small> VOIR FICHE ENTRETIEN</small></button>
+                    <button *ngIf="equipements[getindexEquipment('Nettoyeur_Separateur')].etat == 0" type="button" class="btn btn-success btn-sm fiche" (click)="selectEquipment(equipements[getindexEquipment('Nettoyeur_Separateur')])"><i class=" fas fa-plus"></i> <small> VOIR FICHE ENTRETIEN</small></button>
                     </div>
                   <div class="card-body">
                   </div>
@@ -32,14 +32,11 @@
                   <img class="image card-img-top" src="../../assets/Web/img/silo.jpg" alt="Silo">
                   <div class="overlay">
                     <ul class="text">
-                      <li class="h6"><i class='fas fa-times-circle text-danger'></i> Température : {{equipements[getindexEquipment('Silo')].variable.temperature}} ; Humidité : {{equipements[getindexEquipment('Silo')].variable.humidite}}</li> 
-                      <li class="h6"><i class='fas fa-times-circle text-danger'></i> Poussière : {{equipements[getindexEquipment('Silo')].variable.poussiere}} ; Taux insecticide : {{equipements[getindexEquipment('Silo')].variable.insecticide}}</li> 
+                      <li class="h6"><i class='fas '></i> Température : {{equipements[getindexEquipment('Silo')].variable.temperature}} ; Humidité : {{equipements[getindexEquipment('Silo')].variable.humidite}}</li> 
+                      <li class="h6"><i class='fas '></i> Poussière : {{equipements[getindexEquipment('Silo')].variable.poussiere}} ; Taux insecticide : {{equipements[getindexEquipment('Silo')].variable.insecticide}}</li> 
                       <li *ngIf="equipements[getindexEquipment('Silo')].etat == 0" class="h6"> <i class='fas fa-times-circle text-danger'></i> Panne au niveau du silo</li>
-                     <!--
-                       <li class="h6"><i class='fas fa-times-circle text-danger'></i> Panne au niveau du silo</li>
-                      <li class="h6"><i class='fas fa-times-circle text-danger'></i> Panne au niveau du silo</li> -->
                     </ul>
-                    <button type="button" class="btn btn-success btn-sm fiche" routerLink="/silo" routerLinkActive="active"><i class=" fas fa-plus"></i> <small> VOIR FICHE ENTRETIEN</small></button>
+                    <button *ngIf="equipements[getindexEquipment('Silo')].etat == 0" type="button" class="btn btn-success btn-sm fiche" (click)="selectEquipment(equipements[getindexEquipment('Silo')])"><i class=" fas fa-plus"></i> <small> VOIR FICHE ENTRETIEN</small></button>
                   </div>
                   <div class="card-body">
                   </div>
@@ -54,11 +51,11 @@
                   <img class="image card-img-top" src=".../../assets/Web/img/boisseau.jpg" alt="Boisseaux de chargement">
                   <div class="overlay">
                     <ul class="text">
-                      <li class="h6"><i class='fas fa-times-circle text-danger'></i> Température : {{equipements[getindexEquipment('Boisseaux')].variable.temperature}} ; Humidité : {{equipements[getindexEquipment('Boisseaux')].variable.humidite}}</li> 
-                      <li class="h6"><i class='fas fa-times-circle text-danger'></i> Poussière : {{equipements[getindexEquipment('Boisseaux')].variable.poussiere}} ; Taux insecticide : {{equipements[getindexEquipment('Boisseaux')].variable.insecticide}}</li> 
+                      <li class="h6"><i class='fas '></i> Température : {{equipements[getindexEquipment('Boisseaux')].variable.temperature}} ; Humidité : {{equipements[getindexEquipment('Boisseaux')].variable.humidite}}</li> 
+                      <li class="h6"><i class='fas '></i> Poussière : {{equipements[getindexEquipment('Boisseaux')].variable.poussiere}} ; Taux insecticide : {{equipements[getindexEquipment('Boisseaux')].variable.insecticide}}</li> 
                       <li *ngIf="equipements[getindexEquipment('Boisseaux')].etat == 0" class="h6"> <i class='fas fa-times-circle text-danger'></i> Panne au niveau des boisseaux</li>
                     </ul>
-                    <button type="button" class="btn btn-success btn-sm fiche"><i class=" fas fa-plus"></i> <small> VOIR FICHE ENTRETIEN</small></button>
+                    <button *ngIf="equipements[getindexEquipment('Boisseaux')].etat == 0" type="button" class="btn btn-success btn-sm fiche" (click)="selectEquipment(equipements[getindexEquipment('Boisseaux')])"><i class=" fas fa-plus"></i> <small> VOIR FICHE ENTRETIEN</small></button>
                   </div>
                   <div class="card-body">
                   </div>
@@ -76,11 +73,11 @@
                   <img class="image card-img-top" src="../../assets/Web/img/roulage.jpg" alt="Grille de roulage">
                   <div class="overlay">
                     <ul class="text">
-                      <li class="h6"><i class='fas fa-times-circle text-danger'></i> Température : {{equipements[getindexEquipment('Grille_Roulage')].variable.temperature}} ; Humidité : {{equipements[getindexEquipment('Grille_Roulage')].variable.humidite}}</li> 
-                      <li class="h6"><i class='fas fa-times-circle text-danger'></i> Poussière : {{equipements[getindexEquipment('Grille_Roulage')].variable.poussiere}} ; Taux insecticide : {{equipements[getindexEquipment('Grille_Roulage')].variable.insecticide}}</li> 
+                      <li class="h6"><i class='fas '></i> Température : {{equipements[getindexEquipment('Grille_Roulage')].variable.temperature}} ; Humidité : {{equipements[getindexEquipment('Grille_Roulage')].variable.humidite}}</li> 
+                      <li class="h6"><i class='fas '></i> Poussière : {{equipements[getindexEquipment('Grille_Roulage')].variable.poussiere}} ; Taux insecticide : {{equipements[getindexEquipment('Grille_Roulage')].variable.insecticide}}</li> 
                       <li *ngIf="equipements[getindexEquipment('Grille_Roulage')].etat == 0" class="h6"> <i class='fas fa-times-circle text-danger'></i> Panne au niveau du roulage</li>
                     </ul>
-                    <button type="button" class="btn btn-success btn-sm fiche"><i class=" fas fa-plus"></i> <small> VOIR FICHE ENTRETIEN</small></button>
+                    <button *ngIf="equipements[getindexEquipment('Grille_Roulage')].etat == 0" type="button" class="btn btn-success btn-sm fiche" (click)="selectEquipment(equipements[getindexEquipment('Grille_Roulage')])"><i class=" fas fa-plus"></i> <small> VOIR FICHE ENTRETIEN</small></button>
                   </div>
                   <div class="card-body">
                   </div>
@@ -96,11 +93,11 @@
                   <img class="image card-img-top" src="../../assets/Web/img/tremie.jpg" alt="Trémie de reception">
                   <div class="overlay">
                     <ul class="text">
-                      <li class="h6"><i class='fas fa-times-circle text-danger'></i> Température : {{equipements[getindexEquipment('Tremie')].variable.temperature}} ; Humidité : {{equipements[getindexEquipment('Tremie')].variable.humidite}}</li> 
-                      <li class="h6"><i class='fas fa-times-circle text-danger'></i> Poussière : {{equipements[getindexEquipment('Tremie')].variable.poussiere}} ; Taux insecticide : {{equipements[getindexEquipment('Tremie')].variable.insecticide}}</li> 
+                      <li class="h6"><i class='fas '></i> Température : {{equipements[getindexEquipment('Tremie')].variable.temperature}} ; Humidité : {{equipements[getindexEquipment('Tremie')].variable.humidite}}</li> 
+                      <li class="h6"><i class='fas '></i> Poussière : {{equipements[getindexEquipment('Tremie')].variable.poussiere}} ; Taux insecticide : {{equipements[getindexEquipment('Tremie')].variable.insecticide}}</li> 
                       <li *ngIf="equipements[getindexEquipment('Tremie')].etat == 0" class="h6"> <i class='fas fa-times-circle text-danger'></i> Panne au niveau du trémie</li>
                     </ul>
-                    <button type="button" class="btn btn-success btn-sm fiche"><i class=" fas fa-plus"></i> <small> VOIR FICHE ENTRETIEN</small></button>
+                    <button *ngIf="equipements[getindexEquipment('Tremie')].etat == 0" type="button" class="btn btn-success btn-sm fiche" (click)="selectEquipment(equipements[getindexEquipment('Tremie')])"><i class=" fas fa-plus"></i> <small> VOIR FICHE ENTRETIEN</small></button>
                   </div>
                   <div class="card-body">
                   </div>
@@ -116,11 +113,11 @@
                   <img class=" image card-img-top" src="../../assets/Web/img/elevateur.png" alt="Élevateur à godets ">
                   <div class="overlay">
                     <ul class="text">
-                      <li class="h6"><i class='fas fa-times-circle text-danger'></i> Température : {{equipements[getindexEquipment('Elevateur')].variable.temperature}} ; Humidité : {{equipements[getindexEquipment('Elevateur')].variable.humidite}}</li> 
-                      <li class="h6"><i class='fas fa-times-circle text-danger'></i> Poussière : {{equipements[getindexEquipment('Elevateur')].variable.poussiere}} ; Taux insecticide : {{equipements[getindexEquipment('Elevateur')].variable.insecticide}}</li> 
+                      <li class="h6"><i class='fas '></i> Température : {{equipements[getindexEquipment('Elevateur')].variable.temperature}} ; Humidité : {{equipements[getindexEquipment('Elevateur')].variable.humidite}}</li> 
+                      <li class="h6"><i class='fas '></i> Poussière : {{equipements[getindexEquipment('Elevateur')].variable.poussiere}} ; Taux insecticide : {{equipements[getindexEquipment('Elevateur')].variable.insecticide}}</li> 
                       <li *ngIf="equipements[getindexEquipment('Elevateur')].etat == 0" class="h6"> <i class='fas fa-times-circle text-danger'></i> Panne au niveau de l'élevateur</li>
                     </ul>
-                    <button type="button" class="btn btn-success btn-sm fiche"><i class=" fas fa-plus"></i> <small> VOIR FICHE ENTRETIEN</small></button>
+                    <button *ngIf="equipements[getindexEquipment('Elevateur')].etat == 0" type="button" class="btn btn-success btn-sm fiche" (click)="selectEquipment(equipements[getindexEquipment('Elevateur')])"><i class=" fas fa-plus"></i> <small> VOIR FICHE ENTRETIEN</small></button>
                   </div>
                   <div class="card-body">
                   </div>
@@ -133,9 +130,14 @@
                 </div>
 
               </div>
+              
             </div>
+              <app-add-fiche-entretien *ngIf="selectedEquipment" [equipmentChoisi]="selectedEquipment" (update)="updateEquipement($event)"></app-add-fiche-entretien>
+      
+            
 
-          <!-- <app-add-fiche-entretien [equipment]="selectedEquipement"></app-add-fiche-entretien> -->
+            
+            
 
 
 
