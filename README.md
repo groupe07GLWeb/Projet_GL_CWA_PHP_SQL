@@ -1,3 +1,11 @@
+#Pages WEB et chemin d'accès:
+Login : localhost:4200/ <br/>
+Visualiser équipement: localhost:4200/equipment<br/>
+Parcours cereales: localhost:4200/parcereale<br/>
+Silo : localhost:4200/silo<br/>
+Lorsque on lance le projet, c'est la page "login" qui s'affiche. <br/>
+Vous pouvez voir les routes dans le fichier "app-routing.module.ts" et les changer.<br/>
+
 # Projet_GL_CWA_PHP_SQL
 Ceci est le projet Angular sous l'architecture PHP SQL<br/>
 Les scripts Back-End du serveur sont disponnibles dans ./PHP/ <br/>
