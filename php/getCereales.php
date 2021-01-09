@@ -20,7 +20,7 @@ if ($result = mysqli_query($connexion,$sqlAllCereales ))
 		$cereales[$index]['date_arrivage'] = $row['date_arrivage'];
 		$cereales[$index]['date_expedition'] = $row['date_expedition'];
 		$cereales[$index]['num_cellule'] = $row['num_cellule'];
-		$cereales[$index]['qualité'] = $row['qualité'];
+		$cereales[$index]['qualite'] = $row['qualite'];
 		$index++;
 	}
 	echo "cereales";
