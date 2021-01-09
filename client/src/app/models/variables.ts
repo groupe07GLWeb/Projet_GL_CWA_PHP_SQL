@@ -1,12 +1,12 @@
 export class Variables {
-public id: Number;
-public temperature: Number;
-public humidite: Number;
-public poussiere:Number;
-public insecticide:Number;
+public id: number;
+public temperature: number;
+public humidite: number;
+public poussiere:number;
+public insecticide:number;
 
 
-constructor(id:number,temperature: Number,humidite: Number,poussiere:Number,insecticide:Number) {
+constructor(id:number,temperature: number,humidite: number,poussiere:number,insecticide:number) {
 this.id = id;
 this.temperature = temperature;
 this.humidite = humidite;
