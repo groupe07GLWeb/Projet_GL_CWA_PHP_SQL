@@ -99,11 +99,6 @@ export class Service
 	{
 		return this.http.get<Variables[]>('http://localhost/Projet_GL_CWA_PHP_SQL/php/getVariables.php');
 	}
-//A tester
-	deleteVariables(id: Number)
-	{
-		return this.http.delete<Variables[]>('http://localhost/Projet_GL_CWA_PHP_SQL/php/sqlDelete.php?id='+id);
-	}
 
 	getEquipements()
 	{
