@@ -65,6 +65,10 @@ export class Service
 	getUtilisateurs(): Observable<any> {
 		return this.http.get<any>(this.baseUrl + '/getUtilisateurs.php');
 	  }
+
+	  getCereales(): Observable<any> {
+		return this.http.get<any>(this.baseUrl + '/getCereales.php');
+	  }
 	
 	  
 	  createUtilisateur(user: Utilisateur): Observable<any> {
