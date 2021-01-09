@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html>
 <head>
 		<script src="node_modules/charts.js/src/charts.js"></script>
@@ -7,22 +7,36 @@
 <body>
 
 <div>
-	<div style="display: block">
-	 <canvas baseChart
-
-[datasets]="barChartData"
-
-[labels]="barChartLabels"
-
-[options]="barChartOptions"
-
-[legend]="barChartLegend"
-
-[chartType]="barChartType">
+	<h1 style="text-align: center">Température par silo</h1>
+<div style="display: block">
+	
+<canvas  id="TempChart">
 	
 </canvas>
-
 </div>
+
+<div style="display: block">
+	<h1 style="text-align: center">Poussière par silo</h1>
+<canvas  id="PoussChart">
+	
+</canvas>
+</div>
+
+<div style="display: block">
+	<h1 style="text-align: center">Humidité par silo</h1>
+
+<canvas id="HumChart">
+	
+</canvas>
+</div>
+
+<div style="display: block">
+	<h1 style="text-align: center">Insecticides par silo</h1>
+<canvas id="InsecChart">
+	
+</canvas>
+</div>
+
 </div>
 </body>
 
