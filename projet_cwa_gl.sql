@@ -139,9 +139,9 @@ CREATE TABLE `variable` (
 --
 
 INSERT INTO `variable` (`id`, `temperature`, `humidite`, `poussiere`, `insecticide`) VALUES
-(1, 15, 0.01, 33, 0.5),
-(2, 13, 0.04, 60, 0.9);
-
+(1, 15, 0.01, 0.33, 0.5),
+(2, 13, 0.04, 0.6, 0.9),
+(3, -1, 0.22, 0.05, 0.66);
 --
 -- Index pour les tables déchargées
 --
