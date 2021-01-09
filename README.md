@@ -1,4 +1,4 @@
-#Pages WEB et chemin d'accès:
+# Pages WEB et chemin d'accès:
 Login : localhost:4200/ <br/>
 Visualiser équipement: localhost:4200/equipment<br/>
 Parcours cereales: localhost:4200/parcereale<br/>
