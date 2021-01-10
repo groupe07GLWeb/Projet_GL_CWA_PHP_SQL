@@ -1,3 +1,4 @@
+![Alt text](SARL.jpg?raw=true "Title")
 # Pages WEB et chemin d'accès:
 Login : localhost:4200/ <br/>
 Visualiser équipement: localhost:4200/equipment<br/>
