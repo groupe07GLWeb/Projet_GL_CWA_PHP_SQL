@@ -23,9 +23,9 @@ if ($result = mysqli_query($connexion,$sqlAllCereales ))
 		$cereales[$index]['qualite'] = $row['qualite'];
 		$index++;
 	}
-	echo "cereales";
+	//echo "cereales";
 	echo json_encode($cereales);
-echo "\n";
+//echo "\n";
 }else{
 	http_response_code(404);
 	echo "Error retriving data of cereales". mysqli_error($connexion);
